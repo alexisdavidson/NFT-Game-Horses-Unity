@@ -1,0 +1,14 @@
+.vs
+.vscode
+/Builds
+/Build
+/Library
+Assets/rocketzorrox.txt
+/obj
+/Temp
+/Logs
+/*.csproj
+/*.sln
+/steam_api64.dll
+/steam_api64.dll.meta
+/ProjectSettings/QualitySettings.asset
