@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
@@ -11,12 +12,20 @@ public class GameController : MonoBehaviour
     [SerializeField] string testData = "";
     [SerializeField] float goalX = 500;
     [SerializeField] float curveGoal = 10;
+    [SerializeField] float delayToShowResults = 2.0f;
+    [SerializeField] GameObject endMenu;
+    [SerializeField] TMP_Text winnerText;
     List<int> finishers = new List<int>();
-    bool raceStarted;
     List<Curve> curves;
 
     [SerializeField] float updateCameraParentDelay = 0.5f;
     float updateCameraParentLast;
+
+    [SerializeField] float checkRaceFinishedDelay = 0.5f;
+    float checkRaceFinishedLast;
+
+    bool raceStarted;
+    bool raceFinished;
 
     void StartGame(string data)
     {
@@ -28,9 +37,36 @@ public class GameController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (raceStarted)
+        if (raceStarted && !raceFinished)
         {
             UpdateCameraParent();
+            CheckIfRaceFinished();
+        }
+    }
+
+    IEnumerator FinishRaceInSeconds()
+    {
+        raceFinished = true;
+        yield return new WaitForSeconds(delayToShowResults);
+        endMenu.SetActive(true);
+        winnerText.text = finishers[0].ToString();
+        Time.timeScale = 0.0f;
+        yield return null;
+    }
+
+    void CheckIfRaceFinished()
+    {
+        if (Time.time - checkRaceFinishedLast > checkRaceFinishedDelay)
+        {
+            var horsesNotAtTheEnd = playerHorses.FirstOrDefault(item => item.transform.position.x < goalX && item.gameObject.activeSelf);
+
+            if (horsesNotAtTheEnd == null)
+            {
+                Debug.Log("Race finished!");
+                StartCoroutine(FinishRaceInSeconds());
+            }
+
+            checkRaceFinishedLast = Time.time;
         }
     }
 
@@ -43,7 +79,8 @@ public class GameController : MonoBehaviour
             {
                 if (mostAheadHorse.transform.position.x > goalX)
                     Camera.main.transform.parent = null;
-                else Camera.main.transform.parent = mostAheadHorse.transform;
+                else
+                    Camera.main.transform.parent = mostAheadHorse.transform;
             }
 
             updateCameraParentLast = Time.time;
