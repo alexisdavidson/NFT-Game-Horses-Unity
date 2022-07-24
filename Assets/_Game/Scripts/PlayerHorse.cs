@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHorse : MonoBehaviour
@@ -9,14 +8,21 @@ public class PlayerHorse : MonoBehaviour
     [SerializeField] TextMesh textMesh;
     [SerializeField] float delayBeforeMove = 2.0f;
     [SerializeField] float speed = 4.0f;
-    [SerializeField] float speedVariation = 1.3f;
 
+    Vector3 originalPosition;
+    Curve curve;
+    float startTime;
     bool moving;
+    float goalX;
 
-    public void Activate(bool state, string playerName)
+    public void Activate(Curve curve, float goalX, string playerName)
     {
+        Debug.Log("Activate horse " + playerName + " with curve a=" + curve.a + ", b=" + curve.b + ", xToReach10=" + curve.xToReachGoal);
+        this.curve = curve;
+        this.goalX = goalX;
+        originalPosition = transform.position;
         moving = false;
-        gameObject.SetActive(state);
+        gameObject.SetActive(true);
         textMesh.text = playerName;
 
         const string animationToPlay = "Idle02";
@@ -27,17 +33,26 @@ public class PlayerHorse : MonoBehaviour
             StartCoroutine(StartMovingAfterTime());
     }
 
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
+
     IEnumerator StartMovingAfterTime()
     {
         yield return new WaitForSeconds(delayBeforeMove);
         moving = true;
-        speed = Random.Range(speed / speedVariation, speed * speedVariation);
+        startTime = Time.time;
         yield return null;
     }
 
     private void FixedUpdate()
     {
         if (moving)
-            gameObject.transform.position += new Vector3(Time.deltaTime * speed, 0, 0);
+        {
+            var x = Time.time - startTime;
+            var y = (x + curve.a * Mathf.Sin(curve.b * x)) * goalX * speed / curve.goalX;
+            gameObject.transform.position = originalPosition + new Vector3(y, 0, 0);
+        }
     }
 }

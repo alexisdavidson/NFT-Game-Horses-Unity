@@ -50,8 +50,7 @@ MonoBehaviour:
   animatorJockey: {fileID: 3648095240805073798}
   textMesh: {fileID: 3596260219510168008}
   delayBeforeMove: 1.5
-  speed: 30
-  speedVariation: 1.3
+  speed: 1
 --- !u!1 &8559424917509095121
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +227,16 @@ PrefabInstance:
     - target: {fileID: 462094, guid: c58dfeb907f6a3144a9ab5818ece0091, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 205716027516674538, guid: c58dfeb907f6a3144a9ab5818ece0091,
+        type: 3}
+      propertyPath: m_LODs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205716027516674538, guid: c58dfeb907f6a3144a9ab5818ece0091,
+        type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.0076132184
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c58dfeb907f6a3144a9ab5818ece0091, type: 3}

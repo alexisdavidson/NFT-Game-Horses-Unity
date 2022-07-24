@@ -9,19 +9,22 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerHorse[] playerHorses;
     [SerializeField] TMP_Text text;
     [SerializeField] string testData = "";
+    [SerializeField] float goalX = 500;
+    [SerializeField] float curveGoal = 10;
     List<int> finishers = new List<int>();
     bool raceStarted;
+    List<Curve> curves;
 
-    float updateCameraParentDelay = 0.2f;
+    [SerializeField] float updateCameraParentDelay = 0.5f;
     float updateCameraParentLast;
 
-    struct curve
+    void StartGame(string data)
     {
-        public float a;
-        public float b;
-        public float xToReach10;
+        ParseData(data);
+        ComputeCurves();
+        ActivateHorses();
+        raceStarted = true;
     }
-    List<curve> curves;
 
     void FixedUpdate()
     {
@@ -36,36 +39,44 @@ public class GameController : MonoBehaviour
         if (Time.time - updateCameraParentLast > updateCameraParentDelay)
         {
             var mostAheadHorse = playerHorses.OrderByDescending(item => item.transform.position.x).FirstOrDefault();
-            Camera.main.transform.parent = mostAheadHorse?.transform;
+            if (mostAheadHorse != null)
+            {
+                if (mostAheadHorse.transform.position.x > goalX)
+                    Camera.main.transform.parent = null;
+                else Camera.main.transform.parent = mostAheadHorse.transform;
+            }
 
             updateCameraParentLast = Time.time;
         }
     }
 
-    void StartGame(string data)
-    {
-        ParseData(data);
-        ComputeCurves();
-        ActivateHorses();
-        raceStarted = true;
-    }
-
     void ComputeCurves()
     {
-        // f(x) = x + a sin(b x)
-        // f(x) = 10
-        // 10 - x = a sin(bx)
-        // -x = a sin(bx) - 10
-        // x/a = sin(bx) - 10/a
-        // x/a - sin(bx) = -10/a
-        curves = new List<curve>();
+        curves = new List<Curve>();
         foreach(var finisher in finishers)
         {
-            var c = new curve();
-            c.a = Random.Range(0.0f, 1);
-            c.b = Random.Range(0.0f, 1);
-            curves.Add(c);
+            var curve = new Curve();
+            curve.a = Random.Range(0.1f, 0.9f);
+            curve.b = Random.Range(0.1f, 0.9f);
+            curve.goalX = curveGoal;
+            curves.Add(curve);
         }
+
+        float step = 0.01f;
+        foreach (var curve in curves)
+        {
+            float currentX = 0;
+            float currentY = 0;
+            while (currentY < curve.goalX)
+            {
+                // f(x) = x + a sin(b x)
+                currentY = currentX + curve.a * Mathf.Sin(curve.b * currentX);
+                currentX += step;
+            }
+            curve.xToReachGoal = currentX;
+        }
+
+        curves = curves.OrderBy(x => x.xToReachGoal).ToList();
     }
 
     void ActivateHorses()
@@ -73,8 +84,8 @@ public class GameController : MonoBehaviour
         for(int i = 0; i < playerHorses.Length; i ++)
         {
             if (i < finishers.Count)
-                playerHorses[i].Activate(true, finishers[i].ToString());
-            else playerHorses[i].Activate(false, string.Empty);
+                playerHorses[i].Activate(curves[i], goalX, finishers[i].ToString());
+            else playerHorses[i].Deactivate();
         }
     }
 
