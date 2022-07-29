@@ -29,6 +29,8 @@ public class GameController : MonoBehaviour
 
     void StartGame(string data)
     {
+        playerHorses = playerHorses.OrderBy(x => Random.Range(0, 10)).ToArray();
+
         ParseData(data);
         ComputeCurves();
         ActivateHorses();

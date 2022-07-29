@@ -655,7 +655,7 @@ MonoBehaviour:
   - {fileID: 455960089}
   - {fileID: 1916450440}
   text: {fileID: 1548496899}
-  testData: '[8848,2438,4723]'
+  testData: '[1337, 999, 5410]'
   goalX: 500
   curveGoal: 10
   delayToShowResults: 2
