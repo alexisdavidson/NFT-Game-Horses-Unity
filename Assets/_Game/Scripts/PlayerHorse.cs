@@ -55,4 +55,9 @@ public class PlayerHorse : MonoBehaviour
             gameObject.transform.position = originalPosition + new Vector3(y, 0, 0);
         }
     }
+
+    public void SetShowNftIdsOnHorses(bool active)
+    {
+        textMesh.gameObject.SetActive(active);
+    }
 }

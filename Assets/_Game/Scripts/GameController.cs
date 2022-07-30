@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float delayToShowResults = 2.0f;
     [SerializeField] GameObject endMenu;
     [SerializeField] TMP_Text winnerText;
+    [SerializeField] Transform camerasManagerTransform;
     List<int> finishers = new List<int>();
     List<Curve> curves;
 
@@ -24,6 +25,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float checkRaceFinishedDelay = 0.5f;
     float checkRaceFinishedLast;
 
+    public bool RaceFinished { get { return raceFinished; } }
     bool raceStarted;
     bool raceFinished;
 
@@ -80,13 +82,19 @@ public class GameController : MonoBehaviour
             if (mostAheadHorse != null)
             {
                 if (mostAheadHorse.transform.position.x > goalX)
-                    Camera.main.transform.parent = null;
+                    camerasManagerTransform.parent = null;
                 else
-                    Camera.main.transform.parent = mostAheadHorse.transform;
+                    camerasManagerTransform.parent = mostAheadHorse.transform;
             }
 
             updateCameraParentLast = Time.time;
         }
+    }
+
+    public void SetShowNftIdsOnHorses(bool active)
+    {
+        foreach(var horse in playerHorses)
+            horse.SetShowNftIdsOnHorses(active);
     }
 
     void ComputeCurves()

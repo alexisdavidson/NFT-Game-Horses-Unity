@@ -50,7 +50,7 @@ MonoBehaviour:
   animatorJockey: {fileID: 3648095240805073798}
   textMesh: {fileID: 3596260219510168008}
   delayBeforeMove: 1.5
-  speed: 1
+  speed: 0.5
 --- !u!1 &8559424917509095121
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8559424917509095121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.12, z: 0}
+  m_LocalPosition: {x: 0, y: 7.76, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
