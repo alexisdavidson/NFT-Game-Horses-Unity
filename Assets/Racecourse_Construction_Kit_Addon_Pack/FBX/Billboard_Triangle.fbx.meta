@@ -1,0 +1,87 @@
+fileFormatVersion: 2
+guid: f656c3e91b2a1e54c9a55a8587f6049b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Adverts
+    100002: //RootNode
+    100004: Floodlight_Bulb1
+    100006: Floodlight_Case
+    100008: Frame
+    100010: Legs
+    400000: Adverts
+    400002: //RootNode
+    400004: Floodlight_Bulb1
+    400006: Floodlight_Case
+    400008: Frame
+    400010: Legs
+    2300000: Adverts
+    2300002: Floodlight_Bulb1
+    2300004: Floodlight_Case
+    2300006: Frame
+    2300008: Legs
+    3300000: Adverts
+    3300002: Floodlight_Bulb1
+    3300004: Floodlight_Case
+    3300006: Frame
+    3300008: Legs
+    4300000: Adverts
+    4300002: Floodlight_Case
+    4300004: Floodlight_Bulb1
+    4300006: Legs
+    4300008: Frame
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

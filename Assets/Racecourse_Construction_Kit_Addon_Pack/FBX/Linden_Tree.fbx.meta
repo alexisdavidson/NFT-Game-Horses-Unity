@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: e49517f85f7585f48832bce53e751159
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Trees_Temp_Branches_03
+    100004: Trees_Temp_Tree_Leaves_Lower_03
+    100006: Trees_Temp_Tree_Leaves_Upper_03
+    100008: Trees_Temp_Trunk_05
+    100010: Branches
+    100012: Leaves_Lower
+    100014: Leaves_Upper
+    100016: Trunk
+    400000: //RootNode
+    400002: Trees_Temp_Branches_03
+    400004: Trees_Temp_Tree_Leaves_Lower_03
+    400006: Trees_Temp_Tree_Leaves_Upper_03
+    400008: Trees_Temp_Trunk_05
+    400010: Branches
+    400012: Leaves_Lower
+    400014: Leaves_Upper
+    400016: Trunk
+    2300000: Trees_Temp_Branches_03
+    2300002: Trees_Temp_Tree_Leaves_Lower_03
+    2300004: Trees_Temp_Tree_Leaves_Upper_03
+    2300006: Trees_Temp_Trunk_05
+    2300008: Branches
+    2300010: Leaves_Lower
+    2300012: Leaves_Upper
+    2300014: Trunk
+    3300000: Trees_Temp_Branches_03
+    3300002: Trees_Temp_Tree_Leaves_Lower_03
+    3300004: Trees_Temp_Tree_Leaves_Upper_03
+    3300006: Trees_Temp_Trunk_05
+    3300008: Branches
+    3300010: Leaves_Lower
+    3300012: Leaves_Upper
+    3300014: Trunk
+    4300000: Trees_Temp_Branches_03
+    4300002: Trees_Temp_Trunk_05
+    4300004: Trees_Temp_Tree_Leaves_Lower_03
+    4300006: Trees_Temp_Tree_Leaves_Upper_03
+    4300008: Branches
+    4300010: Trunk
+    4300012: Leaves_Lower
+    4300014: Leaves_Upper
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

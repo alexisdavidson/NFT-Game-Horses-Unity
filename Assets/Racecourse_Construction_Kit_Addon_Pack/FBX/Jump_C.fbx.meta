@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: d2d1c45f485be7a439f7b1faff8f30f3
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Fence_A
+    100002: Fence_B
+    100004: Fence_Ends
+    100006: Fronds
+    100008: Grass
+    100010: Hedge_Inner
+    100012: Hedge_Outer
+    100014: //RootNode
+    100016: Side_Fence_A
+    100018: Side_Fence_B
+    400000: Fence_A
+    400002: Fence_B
+    400004: Fence_Ends
+    400006: Fronds
+    400008: Grass
+    400010: Hedge_Inner
+    400012: Hedge_Outer
+    400014: //RootNode
+    400016: Side_Fence_A
+    400018: Side_Fence_B
+    2300000: Fence_A
+    2300002: Fence_B
+    2300004: Fence_Ends
+    2300006: Fronds
+    2300008: Grass
+    2300010: Hedge_Inner
+    2300012: Hedge_Outer
+    2300014: Side_Fence_A
+    2300016: Side_Fence_B
+    3300000: Fence_A
+    3300002: Fence_B
+    3300004: Fence_Ends
+    3300006: Fronds
+    3300008: Grass
+    3300010: Hedge_Inner
+    3300012: Hedge_Outer
+    3300014: Side_Fence_A
+    3300016: Side_Fence_B
+    4300000: Grass
+    4300002: Side_Fence_A
+    4300004: Side_Fence_B
+    4300006: Fence_A
+    4300008: Fence_B
+    4300010: Fence_Ends
+    4300012: Fronds
+    4300014: Hedge_Inner
+    4300016: Hedge_Outer
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

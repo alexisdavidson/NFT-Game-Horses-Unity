@@ -1,0 +1,112 @@
+fileFormatVersion: 2
+guid: 74f9090200b2d0048b990c6719369f37
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: GrillFence
+    100004: Legs
+    100006: Main_Strut
+    100008: Platform
+    100010: Railing_Tops
+    100012: Railing_Verticals
+    100014: Roof
+    100016: Roof_Beams
+    100018: Steps
+    100020: Steps_Sides
+    400000: //RootNode
+    400002: GrillFence
+    400004: Legs
+    400006: Main_Strut
+    400008: Platform
+    400010: Railing_Tops
+    400012: Railing_Verticals
+    400014: Roof
+    400016: Roof_Beams
+    400018: Steps
+    400020: Steps_Sides
+    2300000: GrillFence
+    2300002: Legs
+    2300004: Main_Strut
+    2300006: Platform
+    2300008: Railing_Tops
+    2300010: Railing_Verticals
+    2300012: Roof
+    2300014: Roof_Beams
+    2300016: Steps
+    2300018: Steps_Sides
+    3300000: GrillFence
+    3300002: Legs
+    3300004: Main_Strut
+    3300006: Platform
+    3300008: Railing_Tops
+    3300010: Railing_Verticals
+    3300012: Roof
+    3300014: Roof_Beams
+    3300016: Steps
+    3300018: Steps_Sides
+    4300000: Roof
+    4300002: GrillFence
+    4300004: Steps
+    4300006: Railing_Verticals
+    4300008: Roof_Beams
+    4300010: Main_Strut
+    4300012: Railing_Tops
+    4300014: Steps_Sides
+    4300016: Platform
+    4300018: Legs
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
