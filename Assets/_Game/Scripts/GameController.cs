@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         raceFinished = true;
         yield return new WaitForSeconds(delayToShowResults);
         endMenu.SetActive(true);
-        winnerText.text = finishers[0].ToString();
+        winnerText.text = "Horse " + finishers[0].ToString();
         Time.timeScale = 0.0f;
         yield return null;
     }

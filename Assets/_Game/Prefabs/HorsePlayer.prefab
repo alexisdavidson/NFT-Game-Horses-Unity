@@ -50,7 +50,7 @@ MonoBehaviour:
   animatorJockey: {fileID: 3648095240805073798}
   textMesh: {fileID: 3596260219510168008}
   delayBeforeMove: 1.5
-  speed: 0.5
+  speed: 1
 --- !u!1 &8559424917509095121
 GameObject:
   m_ObjectHideFlags: 0

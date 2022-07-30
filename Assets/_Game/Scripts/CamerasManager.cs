@@ -19,13 +19,16 @@ public class CamerasManager : MonoBehaviour
         while(!gameController.RaceFinished)
         {
             yield return new WaitForSeconds(cooldownToChange);
-            cameras[currentActiveCamera].SetActive(false);
-            currentActiveCamera++;
-            if (currentActiveCamera >= cameras.Length)
-                currentActiveCamera = 0;
-            cameras[currentActiveCamera].SetActive(true);
+            if (!gameController.RaceFinished)
+            {
+                cameras[currentActiveCamera].SetActive(false);
+                currentActiveCamera++;
+                if (currentActiveCamera >= cameras.Length)
+                    currentActiveCamera = 0;
+                cameras[currentActiveCamera].SetActive(true);
 
-            gameController.SetShowNftIdsOnHorses(currentActiveCamera == 0);
+                gameController.SetShowNftIdsOnHorses(currentActiveCamera == 0);
+            }
         }
         yield return null;
     }
